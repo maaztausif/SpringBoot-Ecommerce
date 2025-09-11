@@ -30,14 +30,21 @@ public class ProductController {
 
     @PostMapping("product")
     public ResponseEntity<Product > addProduct(@RequestBody  Product addProduct){
-        return new ResponseEntity<>(service.addProduct(addProduct),HttpStatus.ACCEPTED) ;
+        return new ResponseEntity<>(service.addProduct(null,addProduct),HttpStatus.ACCEPTED) ;
     }
 
-    @PostMapping("product/{productId}")
+    @GetMapping("product/{productId}")
     public ResponseEntity<Product> getProduct(@PathVariable Integer productId){
         return new ResponseEntity<>(service.getProduct(productId),HttpStatus.ACCEPTED);
 
     }
+
+    @PutMapping("product/{productId}")
+    public ResponseEntity<Product> updateProduct(@PathVariable Integer productId,@RequestBody Product product){
+        return new ResponseEntity<>( service.addProduct(productId,product),HttpStatus.ACCEPTED);
+    }
+
+
 
 
 }
