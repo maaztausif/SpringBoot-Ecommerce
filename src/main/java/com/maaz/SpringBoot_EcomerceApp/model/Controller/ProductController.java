@@ -1,9 +1,8 @@
-package com.maaz.SpringBoot_EcomerceApp;
+package com.maaz.SpringBoot_EcomerceApp.model.Controller;
 
 import com.maaz.SpringBoot_EcomerceApp.ProductService.ProductService;
 import com.maaz.SpringBoot_EcomerceApp.model.Product;
 import com.maaz.SpringBoot_EcomerceApp.model.SuccessResponse;
-import jakarta.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -11,9 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 @RestController
 @ResponseBody
